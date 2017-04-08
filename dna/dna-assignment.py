@@ -81,3 +81,18 @@ def is_valid_sequence(dna):
         return False
     else: 
         return True
+        
+def insert_sequence(dna1, dna2, indx):
+    """ (str, str, int) -> str
+
+    Return the string produced by inserting dna2 at the index of dna1 provided 
+    by indx.
+
+    >>>insert_sequence('ACTGTA', 'CCC', 3)
+    'ACTCCCGTA'
+    >>>insert_sequence('GTTACTCA', 'ACGT', -1)
+    'GTTACTCACGTA'
+
+    """
+
+    return dna1[:indx] + dna2 + dna1[indx:]

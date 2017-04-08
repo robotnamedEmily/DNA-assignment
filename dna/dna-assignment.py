@@ -96,3 +96,53 @@ def insert_sequence(dna1, dna2, indx):
     """
 
     return dna1[:indx] + dna2 + dna1[indx:]
+    
+def get_complement(nucleotide):
+    """(str) -> str
+
+    Return the complement for the nucleotide provided.
+
+    >>>get_complement('A')
+    T
+    >>>get_complement('C')
+    G
+    >>>get_complement('G')
+    C
+    >>>get_complement('T')
+    A
+
+    """
+    if nucleotide == 'A':
+        return 'T'
+    elif nucleotide == 'C':
+        return 'G'
+    elif nucleotide == 'G':
+        return 'C'
+    else:
+        return 'A'
+
+def get_complementary_sequence(dna):
+    """(str) -> str
+
+    Return the sequence that is complementary to the sequence 
+    provided.
+
+    >>>get_complementary_sequence('AAGCTATTG')
+    TTCGATAAC
+    >>>get_complementary_sequence('GTCTAAGG')
+    CAGATTCC
+    >>>get_complementary_sequence('TCAGTC')
+    AGTCAG
+
+    """
+    complementary_sequence = ''
+    for nucleotide in dna:
+        if nucleotide == 'A':
+            complementary_sequence += 'T'
+        elif nucleotide == 'C':
+            complementary_sequence += 'G'
+        elif nucleotide == 'G':
+            complementary_sequence += 'C'
+        else:
+            complementary_sequence += 'A'
+    return complementary_sequence

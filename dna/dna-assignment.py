@@ -64,7 +64,7 @@ def contains_sequence(dna1, dna2):
 def is_valid_sequence(dna):
     """ (str) -> bool
 
-    Return True if and only if dna only contains the letters 'A', 'C', 'G',  #not working yet
+    Return True if and only if dna only contains the letters 'A', 'C', 'G', 
     or 'T'.
 
     >>>is_valid_sequence('ACTGAAGT')
